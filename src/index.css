@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0B0D10;
+  --color-brand-surface: #14171B;
+  --color-brand-line: #262B31;
+  --color-brand-text: #EDEFF2;
+  --color-brand-muted: #8A929C;
+  --color-brand-accent: #5EEAD4;
+  --color-brand-warn: #F5A623;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+
+  .animate-pipeline-draw {
+    animation: pipelineDraw 1.2s ease-out forwards;
+  }
+
+  .animate-pulse-accent {
+    animation: pulseAccent 2s infinite ease-in-out;
+  }
+
+  .animate-ambient-glow {
+    animation: ambientGlow 15s ease-in-out infinite alternate;
+  }
+
+  .glass-panel {
+    background: rgba(20, 23, 27, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pipelineDraw {
+  from {
+    max-width: 0%;
+    opacity: 0;
+  }
+  to {
+    max-width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes pulseAccent {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.4);
+    background-color: var(--color-brand-accent);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(94, 234, 212, 0);
+    background-color: rgba(94, 234, 212, 0.6);
+  }
+}
+
+@keyframes ambientGlow {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+  33% { transform: scale(1.1) translate(2%, -3%); opacity: 0.4; }
+  66% { transform: scale(0.9) translate(-2%, 2%); opacity: 0.35; }
+  100% { transform: scale(1.05) translate(1%, 1%); opacity: 0.3; }
+}
