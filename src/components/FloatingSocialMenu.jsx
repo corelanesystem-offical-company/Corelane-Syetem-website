@@ -17,7 +17,7 @@ export default function FloatingSocialMenu() {
   const socials = [
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/923000000000',
+      href: 'https://wa.me/923012756091',
       bg: 'hover:bg-green-500 hover:border-green-500',
       text: 'text-green-400',
       icon: (
@@ -28,7 +28,7 @@ export default function FloatingSocialMenu() {
     },
     {
       name: 'Email',
-      href: 'mailto:hello@corelanesystems.com',
+      href: 'mailto:corelanesystem@gmail.com',
       bg: 'hover:bg-blue-500 hover:border-blue-500',
       text: 'text-blue-400',
       icon: (
@@ -39,7 +39,7 @@ export default function FloatingSocialMenu() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/muhammad-zaid-9363bb377',
+      href: 'https://www.linkedin.com/company/corelane-system/?viewAsMember=true',
       bg: 'hover:bg-blue-700 hover:border-blue-700',
       text: 'text-blue-500',
       icon: (
@@ -50,7 +50,7 @@ export default function FloatingSocialMenu() {
     },
     {
       name: 'Instagram',
-      href: 'https://instagram.com/corelanesystems',
+      href: 'https://www.instagram.com/corelanesystem/',
       bg: 'hover:bg-pink-500 hover:border-pink-500',
       text: 'text-pink-400',
       icon: (

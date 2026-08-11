@@ -26,7 +26,7 @@ const projectTypes = [
   { value: 'other', label: 'Other' },
 ]
 
-const CONTACT_EMAIL = 'hello@corelanesystems.com'
+const CONTACT_EMAIL = 'corelanesystem@gmail.com'
 const initial = { name: '', company: '', email: '', phone: '', country: '', budget: '', projectType: '', deadline: '', message: '', file: null }
 
 export default function ContactForm() {
